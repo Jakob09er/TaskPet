@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskPet App</title>
+  <meta
+    name="description"
+    content="Plan your tasks, feed your pet, and stay focused with TaskPet."
+  />
+  <meta name="theme-color" content="#f7f3ea" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="app-page">
+  <div class="page-shell app-shell">
+    <header class="app-topbar">
+      <a href="index.html" class="brand brand-dynamic" aria-label="Back to TaskPet landing page">
+        <img
+          id="appLogoPet"
+          src="assets/dog_idle.png"
+          alt="Selected TaskPet"
+          class="brand-icon"
+        />
+        <span class="brand-text">TaskPet</span>
+      </a>
+
+      <nav class="topbar-nav" aria-label="Secondary navigation">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </header>
+
+    <main class="app-layout">
+      <!-- LEFT: PET PANEL -->
+      <section class="pet-panel game-card">
+        <div class="pet-panel-inner">
+          <div class="pet-stage-wrap">
+            <div class="pet-stage">
+              <img
+                id="petImage"
+                src="assets/dog_idle.png"
+                alt="Selected TaskPet"
+                class="pet-main-image"
+              />
+            </div>
+          </div>
+
+          <div class="pet-selector" id="petSelector">
+            <button id="prevPetBtn" class="pet-arrow" type="button" aria-label="Previous pet">
+              ‹
+            </button>
+            <button id="nextPetBtn" class="pet-arrow" type="button" aria-label="Next pet">
+              ›
+            </button>
+          </div>
+
+          <div class="pet-info">
+            <h1 id="petTitle" class="pet-title">Dog</h1>
+            <p id="petSubtext" class="pet-subtext">
+              Fleischfresser. Liebt Steaks und erledigte Aufgaben.
+            </p>
+          </div>
+
+          <div class="pet-name-box">
+            <label for="petNameInput" class="label">Name your pet</label>
+            <input
+              id="petNameInput"
+              class="pixel-input"
+              type="text"
+              maxlength="18"
+              placeholder="Enter a name"
+            />
+            <p id="petNameDisplay" class="pet-name-display is-hidden"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: TASK PANEL -->
+      <section class="task-panel game-card">
+        <div class="task-panel-top">
+          <div id="planningHeader" class="planning-header">
+            <div class="time-picker-box">
+              <label for="sessionTimeRange" class="label">How much time do you need?</label>
+
+              <div class="time-value-row">
+                <span class="time-value" id="timeValueLabel">60 min</span>
+              </div>
+
+              <input
+                id="sessionTimeRange"
+                class="time-range"
+                type="range"
+                min="15"
+                max="240"
+                step="15"
+                value="60"
+              />
+
+              <div class="time-range-labels">
+                <span>15m</span>
+                <span>1h</span>
+                <span>2h</span>
+                <span>4h</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="runningHeader" class="running-header is-hidden">
+            <div class="timer-box">
+              <span class="timer-label">Time left</span>
+              <span id="mainTimer" class="main-timer">01:00:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-entry-row">
+          <div class="task-entry-main">
+            <input
+              id="taskInput"
+              class="pixel-input"
+              type="text"
+              placeholder="Add a task..."
+            />
+          </div>
+
+          <div class="task-entry-time">
+            <input
+              id="taskDurationInput"
+              class="pixel-input"
+              type="number"
+              min="5"
+              max="240"
+              step="5"
+              value="30"
+              placeholder="Min"
+            />
+          </div>
+
+          <button id="addTaskBtn" class="pixel-button secondary-button" type="button">
+            Add
+          </button>
+        </div>
+
+        <div class="task-list-header">
+          <div>Task</div>
+          <div>Min</div>
+          <div>Actions</div>
+        </div>
+
+        <div id="taskList" class="task-list">
+          <div class="task-list-empty" id="taskListEmpty">
+            No tasks yet. Add your first mission.
+          </div>
+        </div>
+
+        <div class="app-actions">
+          <button id="startSessionBtn" class="pixel-button primary-button" type="button">
+            Start
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="currentYear"></span> TaskPet</p>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
