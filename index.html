@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskPet – Finish tasks. Feed your pet.</title>
+  <meta
+    name="description"
+    content="TaskPet turns your to-do list into a game. Finish tasks, feed your pet, and don't make it sad."
+  />
+  <meta name="theme-color" content="#f7f3ea" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="landing-page">
+  <div class="page-shell">
+    <header class="topbar">
+      <a href="index.html" class="brand brand-static" aria-label="TaskPet home">
+        <img
+          src="assets/dog_idle.png"
+          alt="TaskPet dog mascot"
+          class="brand-icon"
+        />
+        <span class="brand-text">TaskPet</span>
+      </a>
+
+      <nav class="topbar-nav" aria-label="Main navigation">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="hero-kicker">A tiny productivity game</p>
+          <h1>TaskPet</h1>
+          <p class="hero-tagline">
+            Finish tasks. Feed your pet.<br />
+            <span>Don't make it sad.</span>
+          </p>
+
+          <div class="hero-actions">
+            <a href="app.html" class="start-button">Start</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-pet-stage">
+            <img
+              id="landingDog"
+              class="hero-pet hero-pet-active"
+              src="assets/dog_idle.png"
+              alt=""
+            />
+            <img
+              id="landingRabbit"
+              class="hero-pet"
+              src="assets/rabbit_idle.png"
+              alt=""
+            />
+          </div>
+
+          <div class="hero-glow hero-glow-left"></div>
+          <div class="hero-glow hero-glow-right"></div>
+        </div>
+      </section>
+
+      <section class="features" aria-label="TaskPet highlights">
+        <article class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h2>Privat &amp; Lokal</h2>
+          <p>
+            Diese Web-App läuft komplett in deinem Browser.
+            Wir speichern <strong>keine Daten und kein Konto</strong>.
+          </p>
+          <p>Deine ToDos bleiben nur auf diesem Gerät.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🎮</div>
+          <h2>ToDo Liste als Spiel</h2>
+          <p>
+            Erledigte Aufgaben füttern dein Tier.
+            Nicht erledigte Aufgaben machen es traurig.
+          </p>
+          <p>Motivation durch ein bisschen niedlichen Druck.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⏱</div>
+          <h2>Bleib dran</h2>
+          <p>
+            Setze dir eine Zeit, arbeite deine Aufgaben ab
+            und halte dein TaskPet glücklich.
+          </p>
+          <p>Konzentriert arbeiten war noch nie so niedlich.</p>
+        </article>
+      </section>
+
+      <!-- Ad placeholder: hidden by default, can be enabled later -->
+      <section class="ad-section is-hidden" aria-label="Advertisement">
+        <div class="ad-card">
+          <p class="ad-label">Anzeige</p>
+          <div class="ad-slot-placeholder">
+            Google Ads Platzhalter
+          </div>
+
+          <!-- Example AdSense snippet for later use:
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+               data-ad-slot="1234567890"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+          -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="currentYear"></span> TaskPet</p>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
